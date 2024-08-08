@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 16px;
+            text-align: center;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Financial Data</h1>
+    
+    <div id="stock-data">
+        <h2>Stock Data</h2>
+        <div>{{ stock_data|safe }}</div>
+    </div>
+
+    <div id="balance-sheet">
+        <h2>Balance Sheet</h2>
+        <div>{{ balance_sheet|safe }}</div>
+    </div>
+
+    <div id="financials">
+        <h2>Financials</h2>
+        <div>{{ financials|safe }}</div>
+    </div>
+
+    <div id="cashflow">
+        <h2>Cashflow</h2>
+        <div>{{ cashflow|safe }}</div>
+    </div>
+
+    <a href="/indextemp">Back</a>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Data</title>
+</head>
+<body>
+    <h1>Financial Data</h1>
+    {{ stock_data|safe }}
+    {{ balance_sheet|safe }}
+    {{ financials|safe }}
+    {{ cashflow|safe }}
+    <br>
+    <a href="/indextemp">Back</a>
+</body>
+</html> -->

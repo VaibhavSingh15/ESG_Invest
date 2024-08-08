@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('/static/img/esg_forest2.jpg');
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+        input[type="text"], select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .back-button {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 16px;
+        text-align: center;
+    }
+    .back-button:hover {
+        background-color: #0056b3;
+    }
+    </style>
+</head>
+<body>
+    <!-- <form action="/analyze" method="post">
+        <h1>Analyze Company Data</h1>
+        <label for="company">Company Ticker:</label>
+        <input type="text" id="company" name="company" value="{{ stock }}" required>
+        <label for="analysis_type">Analysis Type:</label>
+        <select id="analysis_type" name="analysis_type" required>
+            <option value="financial">Financial Data</option>
+            <option value="sustainability">Sustainability Data</option>
+            <option value="future_trends">Future Trends</option>
+        </select>
+        <button type="submit">Analyze</button>
+        <button href="esg-investing-app\templates\index.html">Back</button>
+    </form> -->
+    <form action="/analyze" method="post">
+        <h1>Analyze Company Data</h1>
+        <label for="company">Company Ticker:</label>
+        <input type="text" id="company" name="company" value="{{ stock }}" required>
+        <label for="analysis_type">Analysis Type:</label>
+        <select id="analysis_type" name="analysis_type" required>
+            <option value="financial">Financial Data</option>
+            <!-- <option value="sustainability">Sustainability Data</option> -->
+            <option value="future_trends">Future Trends</option>
+        </select>
+        <button type="submit">Analyze</button>
+        <a href="/" class="back-button">Back</a> <!-- Link to the homepage -->
+        <a href="http://localhost:8501/" class="visualize-button">Visualize</a> <!-- Placeholder link for "Visualize" -->
+    </form>
+    
+</body>
+</html>
